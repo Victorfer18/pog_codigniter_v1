@@ -1,0 +1,465 @@
+ERROR - 2023-05-21 00:19:46 --> mysqli_sql_exception: Unknown column '$2y$10$TeJy4TbtExuTD8zAQeD0Su0hYLuRKKf7PN6mzpWibyLUaOmTLhO9O' in 'where clause' in D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Models\UserModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Controllers\UserController.php(75): App\Models\UserModel->login('victorfernando@...', '1234')
+#6 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\UserController->login()
+#7 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wa...')
+#11 {main}
+CRITICAL - 2023-05-21 00:19:46 --> Unknown column '$2y$10$TeJy4TbtExuTD8zAQeD0Su0hYLuRKKf7PN6mzpWibyLUaOmTLhO9O' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `users`
+WHERE `user_email` = \'victorfernando@gmail.com\' AND `user_password` = $2y$10$TeJy4TbtExuTD8zAQeD0Su0hYLuRKKf7PN6mzpWibyLUaOmTLhO9O', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `user_email` = \'victorfernando@gmail.com\' AND `user_password` = $2y$10$TeJy4TbtExuTD8zAQeD0Su0hYLuRKKf7PN6mzpWibyLUaOmTLhO9O')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `user_email` = \'victorfernando@gmail.com\' AND `user_password` = $2y$10$TeJy4TbtExuTD8zAQeD0Su0hYLuRKKf7PN6mzpWibyLUaOmTLhO9O')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `user_email` = \'victorfernando@gmail.com\' AND `user_password` = $2y$10$TeJy4TbtExuTD8zAQeD0Su0hYLuRKKf7PN6mzpWibyLUaOmTLhO9O', [], false)
+ 5 APPPATH\Models\UserModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UserController.php(75): App\Models\UserModel->login('victorfernando@gmail.com', '1234')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 00:23:52 --> syntax error, unexpected integer "2", expecting variable or "{" or "$"
+in APPPATH\Models\UserModel.php on line 60.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\app\\Models\\UserModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 3 APPPATH\Controllers\UserController.php(67): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 00:27:51 --> Undefined array key "user_password"
+in APPPATH\Models\UserModel.php on line 56.
+ 1 APPPATH\Models\UserModel.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_password"', 'D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\app\\Models\\UserModel.php', 56)
+ 2 APPPATH\Controllers\UserController.php(75): App\Models\UserModel->login('victor@gmail.com', '123')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 00:43:57 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Controllers\UserController.php on line 97 and at least 3 expected
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\UserController.php(97): Firebase\JWT\JWT::encode([...], 'your-secret-key')
+ 2 APPPATH\Controllers\UserController.php(89): App\Controllers\UserController->generateJWT([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 00:51:02 --> Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Controllers\UserController.php on line 97 and at least 3 expected
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 188.
+ 1 APPPATH\Controllers\UserController.php(97): Firebase\JWT\JWT::encode([...], 'your-secret-key')
+ 2 APPPATH\Controllers\UserController.php(89): App\Controllers\UserController->generateJWT([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 00:58:27 --> Class "JwtToken" not found
+in APPPATH\Controllers\UserController.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 00:58:45 --> Class "JwtToken" not found
+in APPPATH\Controllers\UserController.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 00:58:52 --> Class "JwtToken" not found
+in APPPATH\Controllers\UserController.php on line 84.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:19:57 --> Undefined property: App\Filters\AuthFilter::$response
+in SYSTEMPATH\API\ResponseTrait.php on line 335.
+ 1 SYSTEMPATH\API\ResponseTrait.php(335): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\AuthFilter::$response', 'D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\vendor\\codeigniter4\\framework\\system\\API\\ResponseTrait.php', 335)
+ 2 SYSTEMPATH\API\ResponseTrait.php(102): App\Filters\AuthFilter->format([...])
+ 3 SYSTEMPATH\API\ResponseTrait.php(139): App\Filters\AuthFilter->respond([...], 401, '')
+ 4 SYSTEMPATH\API\ResponseTrait.php(202): App\Filters\AuthFilter->fail([...], 401, null, '')
+ 5 APPPATH\Filters\AuthFilter.php(32): App\Filters\AuthFilter->failUnauthorized('Token JWT inválido.')
+ 6 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:20:24 --> Undefined property: App\Filters\AuthFilter::$response
+in SYSTEMPATH\API\ResponseTrait.php on line 335.
+ 1 SYSTEMPATH\API\ResponseTrait.php(335): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\AuthFilter::$response', 'D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\vendor\\codeigniter4\\framework\\system\\API\\ResponseTrait.php', 335)
+ 2 SYSTEMPATH\API\ResponseTrait.php(102): App\Filters\AuthFilter->format([...])
+ 3 SYSTEMPATH\API\ResponseTrait.php(139): App\Filters\AuthFilter->respond([...], 401, '')
+ 4 SYSTEMPATH\API\ResponseTrait.php(202): App\Filters\AuthFilter->fail([...], 401, null, '')
+ 5 APPPATH\Filters\AuthFilter.php(32): App\Filters\AuthFilter->failUnauthorized('Token JWT inválido.')
+ 6 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:20:29 --> Undefined property: App\Filters\AuthFilter::$response
+in SYSTEMPATH\API\ResponseTrait.php on line 335.
+ 1 SYSTEMPATH\API\ResponseTrait.php(335): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\AuthFilter::$response', 'D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\vendor\\codeigniter4\\framework\\system\\API\\ResponseTrait.php', 335)
+ 2 SYSTEMPATH\API\ResponseTrait.php(102): App\Filters\AuthFilter->format([...])
+ 3 SYSTEMPATH\API\ResponseTrait.php(139): App\Filters\AuthFilter->respond([...], 401, '')
+ 4 SYSTEMPATH\API\ResponseTrait.php(202): App\Filters\AuthFilter->fail([...], 401, null, '')
+ 5 APPPATH\Filters\AuthFilter.php(32): App\Filters\AuthFilter->failUnauthorized('Token JWT inválido.')
+ 6 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:29:31 --> Call to undefined method CodeIgniter\Exceptions\PageNotFoundException::forInvalidJSON()
+in APPPATH\Filters\AuthFilter.php on line 34.
+ 1 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:36:10 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('8EDBB8F614D53DC1253ABD9497C64A7E30879F8F01FEEA9D4BAFE51FB1EF5E1602070C69835C822D5D9FED99FD8F98309458C06C215E4036365D3E52B324F338', null)
+ 2 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.G5YI5fcJCamut8U1KxDhhEriIgu5nNoEemXluU0MOb4', '8EDBB8F614D53DC1253ABD9497C64A7E30879F8F01FEEA9D4BAFE51FB1EF5E1602070C69835C822D5D9FED99FD8F98309458C06C215E4036365D3E52B324F338', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:37:55 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('8EDBB8F614D53DC1253ABD9497C64A7E30879F8F01FEEA9D4BAFE51FB1EF5E1602070C69835C822D5D9FED99FD8F98309458C06C215E4036365D3E52B324F338', null)
+ 2 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.G5YI5fcJCamut8U1KxDhhEriIgu5nNoEemXluU0MOb4', '8EDBB8F614D53DC1253ABD9497C64A7E30879F8F01FEEA9D4BAFE51FB1EF5E1602070C69835C822D5D9FED99FD8F98309458C06C215E4036365D3E52B324F338', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:39:00 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('8EDBB8F614D53DC1253ABD9497C64A7E30879F8F01FEEA9D4BAFE51FB1EF5E1602070C69835C822D5D9FED99FD8F98309458C06C215E4036365D3E52B324F338', null)
+ 2 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.G5YI5fcJCamut8U1KxDhhEriIgu5nNoEemXluU0MOb4', '8EDBB8F614D53DC1253ABD9497C64A7E30879F8F01FEEA9D4BAFE51FB1EF5E1602070C69835C822D5D9FED99FD8F98309458C06C215E4036365D3E52B324F338', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:39:36 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('8EDBB8F614D53DC1253ABD9497C64A7E30879F8F01FEEA9D4BAFE51FB1EF5E1602070C69835C822D5D9FED99FD8F98309458C06C215E4036365D3E52B324F338', null)
+ 2 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.G5YI5fcJCamut8U1KxDhhEriIgu5nNoEemXluU0MOb4', '8EDBB8F614D53DC1253ABD9497C64A7E30879F8F01FEEA9D4BAFE51FB1EF5E1602070C69835C822D5D9FED99FD8F98309458C06C215E4036365D3E52B324F338', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:42:34 --> Wrong number of segments
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 107.
+ 1 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('', 'QWCYS@JHM1rRaiEF4l9e!zi5uCJNy%ERYBcv9kcNR&5nPM$ShN', [...])
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:45:40 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('QWCYS@JHM1rRaiEF4l9e!zi5uCJNy%ERYBcv9kcNR&5nPM$ShN', null)
+ 2 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.4gQX6vwR27UIbwVs01hxhtotCnJQcVBg6Lrhl8iP-_I', 'QWCYS@JHM1rRaiEF4l9e!zi5uCJNy%ERYBcv9kcNR&5nPM$ShN', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:49:39 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('QWCYS@JHM1rRaiEF4l9e!zi5uCJNy%ERYBcv9kcNR&5nPM$ShN', null)
+ 2 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.4gQX6vwR27UIbwVs01hxhtotCnJQcVBg6Lrhl8iP-_I', 'QWCYS@JHM1rRaiEF4l9e!zi5uCJNy%ERYBcv9kcNR&5nPM$ShN', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:51:21 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('QWCYS@JHM1rRaiEF4l9e!zi5uCJNy%ERYBcv9kcNR&5nPM$ShN', null)
+ 2 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.4gQX6vwR27UIbwVs01hxhtotCnJQcVBg6Lrhl8iP-_I', 'QWCYS@JHM1rRaiEF4l9e!zi5uCJNy%ERYBcv9kcNR&5nPM$ShN', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 01:58:24 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', null)
+ 2 APPPATH\Filters\AuthFilter.php(22): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.nPtg3uGWj_EaFyGL0E5XXujpuvyvOVo3rfzZlD3Zkp8', '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 02:01:15 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', null)
+ 2 APPPATH\Filters\AuthFilter.php(24): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.nPtg3uGWj_EaFyGL0E5XXujpuvyvOVo3rfzZlD3Zkp8', '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 02:01:26 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', null)
+ 2 APPPATH\Filters\AuthFilter.php(24): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.nPtg3uGWj_EaFyGL0E5XXujpuvyvOVo3rfzZlD3Zkp8', '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 02:02:02 --> "kid" empty, unable to lookup correct key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 443.
+ 1 VENDORPATH\firebase\php-jwt\src\JWT.php(133): Firebase\JWT\JWT::getKey('869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', null)
+ 2 APPPATH\Filters\AuthFilter.php(24): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.nPtg3uGWj_EaFyGL0E5XXujpuvyvOVo3rfzZlD3Zkp8', '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', [...])
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('users/register', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-21 18:03:14 --> "kid" empty, unable to lookup correct key
+in VENDORPATH/firebase/php-jwt/src/JWT.php on line 443.
+ 1 VENDORPATH/firebase/php-jwt/src/JWT.php(133): Firebase\JWT\JWT::getKey()
+ 2 APPPATH/Filters/AuthFilter.php(24): Firebase\JWT\JWT::decode()
+ 3 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 4 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-21 18:03:57 --> "kid" empty, unable to lookup correct key
+in VENDORPATH/firebase/php-jwt/src/JWT.php on line 443.
+ 1 VENDORPATH/firebase/php-jwt/src/JWT.php(133): Firebase\JWT\JWT::getKey()
+ 2 APPPATH/Filters/AuthFilter.php(24): Firebase\JWT\JWT::decode()
+ 3 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 4 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-21 18:24:57 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-05-21 18:27:59 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-05-21 18:29:52 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-05-21 18:30:32 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-05-21 18:32:43 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-05-21 18:33:56 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/MigrateStatus.php(82): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateStatus->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-05-21 18:34:02 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+CRITICAL - 2023-05-21 18:34:35 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+ERROR - 2023-05-21 18:37:29 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#8 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#9 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#10 /var/www/html/pog_codigniter_v1/spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#7 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#8 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /var/www/html/pog_codigniter_v1/spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-21 18:42:28 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#8 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#9 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#10 /var/www/html/pog_codigniter_v1/spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#7 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#8 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /var/www/html/pog_codigniter_v1/spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2023-05-21 19:12:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#8 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#9 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#10 /var/www/html/pog_codigniter_v1/spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#7 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#8 /var/www/html/pog_codigniter_v1/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /var/www/html/pog_codigniter_v1/spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}

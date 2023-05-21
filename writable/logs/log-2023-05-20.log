@@ -1,0 +1,162 @@
+CRITICAL - 2023-05-20 22:35:50 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Controllers\UserController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 22:35:59 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Controllers\UserController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 22:36:17 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Controllers\UserController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 22:36:21 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Controllers\UserController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 22:43:00 --> App\Models\UserModel::searchUser_by_email(): Return value must be of type array, CodeIgniter\Database\MySQLi\Builder returned
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Controllers\UserController.php(31): App\Models\UserModel->searchUser_by_email('victorfernando@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 22:43:45 --> App\Models\UserModel::searchUser_by_email(): Return value must be of type array, CodeIgniter\Database\MySQLi\Builder returned
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Controllers\UserController.php(31): App\Models\UserModel->searchUser_by_email('victorfernando@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 22:43:50 --> App\Models\UserModel::searchUser_by_email(): Return value must be of type array, CodeIgniter\Database\MySQLi\Builder returned
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Controllers\UserController.php(31): App\Models\UserModel->searchUser_by_email('victorfernando@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 22:44:01 --> App\Models\UserModel::searchUser_by_email(): Return value must be of type array, CodeIgniter\Database\MySQLi\Result returned
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Controllers\UserController.php(31): App\Models\UserModel->searchUser_by_email('victorfernando@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 22:44:19 --> App\Models\UserModel::searchUser_by_email(): Return value must be of type array, CodeIgniter\Database\MySQLi\Builder returned
+in APPPATH\Models\UserModel.php on line 33.
+ 1 APPPATH\Controllers\UserController.php(31): App\Models\UserModel->searchUser_by_email('victorfernando@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 23:32:02 --> Undefined variable $user_name
+in APPPATH\Controllers\UserController.php on line 58.
+ 1 APPPATH\Controllers\UserController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_name', 'D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\app\\Controllers\\UserController.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 23:32:38 --> App\Models\UserModel::existUser(): Argument #1 ($user_email) must be of type string, null given, called in D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Controllers\UserController.php on line 59
+in APPPATH\Models\UserModel.php on line 38.
+ 1 APPPATH\Controllers\UserController.php(59): App\Models\UserModel->existUser(null)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+CRITICAL - 2023-05-20 23:33:05 --> Undefined variable $user_name
+in APPPATH\Controllers\UserController.php on line 60.
+ 1 APPPATH\Controllers\UserController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_name', 'D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\app\\Controllers\\UserController.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+ERROR - 2023-05-20 23:38:36 --> mysqli_sql_exception: Unknown column 'victorfernando@gmail.coms' in 'where clause' in D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Models\UserModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Controllers\UserController.php(67): App\Models\UserModel->login('victorfernando@...', '123')
+#6 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\UserController->login()
+#7 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wa...')
+#11 {main}
+CRITICAL - 2023-05-20 23:38:36 --> Unknown column 'victorfernando@gmail.coms' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `users`
+WHERE `user_email` = `victorfernando@gmail`.`coms` AND `user_password` = 123', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `user_email` = `victorfernando@gmail`.`coms` AND `user_password` = 123')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `user_email` = `victorfernando@gmail`.`coms` AND `user_password` = 123')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `user_email` = `victorfernando@gmail`.`coms` AND `user_password` = 123', [], false)
+ 5 APPPATH\Models\UserModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UserController.php(67): App\Models\UserModel->login('victorfernando@gmail.coms', '123')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
+ERROR - 2023-05-20 23:38:55 --> mysqli_sql_exception: Unknown column 'victorfernandos@gmail.com' in 'where clause' in D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Models\UserModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\app\Controllers\UserController.php(67): App\Models\UserModel->login('victorfernandos...', '123')
+#6 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\UserController->login()
+#7 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Programas\wamp64\www\codeIgniter\pog_project_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wa...')
+#11 {main}
+CRITICAL - 2023-05-20 23:38:55 --> Unknown column 'victorfernandos@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `users`
+WHERE `user_email` = `victorfernandos@gmail`.`com` AND `user_password` = 123', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `user_email` = `victorfernandos@gmail`.`com` AND `user_password` = 123')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `user_email` = `victorfernandos@gmail`.`com` AND `user_password` = 123')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `user_email` = `victorfernandos@gmail`.`com` AND `user_password` = 123', [], false)
+ 5 APPPATH\Models\UserModel.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\UserController.php(67): App\Models\UserModel->login('victorfernandos@gmail.com', '123')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\wamp64\\www\\codeIgniter\\pog_project_v1\\public\\index.php')
