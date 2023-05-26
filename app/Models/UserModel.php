@@ -65,4 +65,9 @@ class UserModel extends Model
             "updated_at" => new RawSql('CURRENT_TIMESTAMP()')
         ]);
     }
+    public function getUser_by_id(int $id): array
+    {
+        $table = $this->banco->table("users");
+        return $table->where("id", $id)->get()->getResultArray() ?? [];
+    }
 }

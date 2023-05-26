@@ -38,9 +38,7 @@ class LoginController extends BaseController
                 'errors' => $this->validator->getErrors()
             ]);
         }
-
-
-        $key = getenv('JWT_SECRET');
+        $key = "869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0";
         $iat = time();
         $exp = $iat + 3600;
 
@@ -50,7 +48,6 @@ class LoginController extends BaseController
             "iat" => $iat,
             "exp" => $exp,
         );
-
         $token = JWT::encode($payload, $key, 'HS256');
 
         return $this->response->setJSON([

@@ -7,10 +7,6 @@ use Firebase\JWT\JWT;
 
 class UserController extends BaseController
 {
-
-    /**
-     * @filter('auth')
-     */
     public function register_user()
     {
         $fields = [
@@ -72,6 +68,14 @@ class UserController extends BaseController
         $user_name = strval($this->request->getPost("user_name"));
         $user_email = strval($this->request->getPost("user_email"));
         $UserModel = new UserModel();
+        if (empty($UserModel->getUser_by_id($id))) {
+            $UserModel->getUser_by_id($id);
+            return $this->response->setStatusCode(400)->setJSON([
+                'error' => true,
+                'message' => 'Unusario nao existe',
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
         $UserModel->updateUser($id, $user_name, $user_email);
         return $this->response->setJSON([
             "susses" => true,
