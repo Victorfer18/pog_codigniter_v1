@@ -1,9 +1,0 @@
-@host = http://localhost:8080
-@email = victor.vasconcelos@ddccompany.com.br
-@senha = 1234
-@token = eyJ1c2VyX25hbWUiOiJEREMiLCJ1c2VyX3NlY3JldCI6IjY0NGMyMzk2MTFmYmYiLCJ1c2VyX2VtYWlsIjoidmljdG9yLnZhc2NvbmNlbG9zQGRkY2NvbXBhbnkuY29tLmJyIiwidHlwZV91c2VyIjoiRERDIiwicGVybWlzc2lvbl91c2VyX2FsbF9icmFuY2giOiIxIn0=.f1c077eb13523747466547919ed9447dbde926e7
-POST http://localhost:8080/login
-Content-Type: application/x-www-form-urlencoded;
-
-user_email=victor@gmail.com
-&user_password=123
