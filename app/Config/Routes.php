@@ -32,9 +32,9 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 
+$routes->post("/login", "LoginController::index");
 $routes->post("/users/register", "UserController::register_user");
-$routes->post("/login", "UserController::login");
-
+$routes->post("/users/update", "UserController::update_user", ['filter' => 'authFilter']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

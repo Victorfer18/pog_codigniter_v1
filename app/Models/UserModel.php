@@ -55,4 +55,14 @@ class UserModel extends Model
         }
         return [];
     }
+    public function updateUser(int $id, string $user_name, string $user_email): void
+    {
+        $table = $this->banco->table("users");
+        $table->where("id", $id);
+        $table->update([
+            "user_name" => $user_name,
+            "user_email" => $user_email,
+            "updated_at" => new RawSql('CURRENT_TIMESTAMP()')
+        ]);
+    }
 }

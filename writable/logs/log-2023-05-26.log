@@ -1,0 +1,222 @@
+CRITICAL - 2023-05-26 00:10:15 --> key must be a string when using hmac
+in VENDORPATH/firebase/php-jwt/src/JWT.php on line 237.
+ 1 VENDORPATH/firebase/php-jwt/src/JWT.php(207): Firebase\JWT\JWT::sign()
+ 2 APPPATH/Controllers/LoginController.php(54): Firebase\JWT\JWT::encode()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:10:16 --> key must be a string when using hmac
+in VENDORPATH/firebase/php-jwt/src/JWT.php on line 237.
+ 1 VENDORPATH/firebase/php-jwt/src/JWT.php(207): Firebase\JWT\JWT::sign()
+ 2 APPPATH/Controllers/LoginController.php(54): Firebase\JWT\JWT::encode()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:10:17 --> key must be a string when using hmac
+in VENDORPATH/firebase/php-jwt/src/JWT.php on line 237.
+ 1 VENDORPATH/firebase/php-jwt/src/JWT.php(207): Firebase\JWT\JWT::sign()
+ 2 APPPATH/Controllers/LoginController.php(54): Firebase\JWT\JWT::encode()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:10:18 --> key must be a string when using hmac
+in VENDORPATH/firebase/php-jwt/src/JWT.php on line 237.
+ 1 VENDORPATH/firebase/php-jwt/src/JWT.php(207): Firebase\JWT\JWT::sign()
+ 2 APPPATH/Controllers/LoginController.php(54): Firebase\JWT\JWT::encode()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:10:24 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:10:24 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:08 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:09 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:09 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:10 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:10 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:10 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:10 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:10 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:11 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:22:27 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:28:34 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:28:35 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:28:35 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:28:36 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:28:36 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:28:37 --> Key material must be a string, resource, or OpenSSLAsymmetricKey
+in VENDORPATH/firebase/php-jwt/src/Key.php on line 31.
+ 1 APPPATH/Filters/AuthFilter.php(52): Firebase\JWT\Key->__construct()
+ 2 SYSTEMPATH/Filters/Filters.php(173): App\Filters\AuthFilter->before()
+ 3 SYSTEMPATH/CodeIgniter.php(473): CodeIgniter\Filters\Filters->run()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:29:33 --> O filtro {0} deve ter um alias (alcunha) correspondente definido.
+in SYSTEMPATH/Filters/Filters.php on line 340.
+ 1 SYSTEMPATH/Filters/Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:29:33 --> O filtro {0} deve ter um alias (alcunha) correspondente definido.
+in SYSTEMPATH/Filters/Filters.php on line 340.
+ 1 SYSTEMPATH/Filters/Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:29:34 --> O filtro {0} deve ter um alias (alcunha) correspondente definido.
+in SYSTEMPATH/Filters/Filters.php on line 340.
+ 1 SYSTEMPATH/Filters/Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:29:35 --> O filtro {0} deve ter um alias (alcunha) correspondente definido.
+in SYSTEMPATH/Filters/Filters.php on line 340.
+ 1 SYSTEMPATH/Filters/Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:29:35 --> O filtro {0} deve ter um alias (alcunha) correspondente definido.
+in SYSTEMPATH/Filters/Filters.php on line 340.
+ 1 SYSTEMPATH/Filters/Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')
+CRITICAL - 2023-05-26 00:29:36 --> O filtro {0} deve ter um alias (alcunha) correspondente definido.
+in SYSTEMPATH/Filters/Filters.php on line 340.
+ 1 SYSTEMPATH/Filters/Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/pog_codigniter_v1/public/index.php')

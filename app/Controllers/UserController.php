@@ -7,46 +7,7 @@ use Firebase\JWT\JWT;
 
 class UserController extends BaseController
 {
-    public function login()
-    {
-        $fields = [
-            "user_email" => "required|valid_email",
-            "user_password" => "required",
-        ];
-        if (!$this->validate($fields)) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Erro de validação',
-                'errors' => $this->validator->getErrors()
-            ]);
-        };
-        $user_email = $this->request->getPost("user_email");
-        $user_password = $this->request->getPost("user_password");
-        $UserModel = new UserModel();
-        if (empty($UserModel->existUser($user_email))) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Usuario inexistente',
-                'errors' => $this->validator->getErrors()
-            ]);
-        }
-        $get_user = $UserModel->login($user_email, $user_password);
-        if (empty($get_user)) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Usuario ou Senha invalidos',
-                'errors' => $this->validator->getErrors()
-            ]);
-        }
-        return $this->response->setJSON([
-            "susses" => true,
-            "message" => 'Usuario logado',
-            "token" => $this->generateJWT([
-                "user_name" => $get_user["user_name"],
-                "user_email" => $get_user["user_email"]
-            ])
-        ]);
-    }
+
     /**
      * @filter('auth')
      */
@@ -64,9 +25,9 @@ class UserController extends BaseController
                 'errors' => $this->validator->getErrors()
             ]);
         };
-        $user_name = $this->request->getPost("user_name");
-        $user_email = $this->request->getPost("user_email");
-        $user_password = $this->request->getPost("user_password");
+        $user_name = strval($this->request->getPost("user_name"));
+        $user_email = strval($this->request->getPost("user_email"));
+        $user_password = strval($this->request->getPost("user_password"));
         $UserModel = new UserModel();
         if (!empty($UserModel->searchUser_by_name($user_name))) {
             return $this->response->setStatusCode(400)->setJSON([
@@ -93,9 +54,28 @@ class UserController extends BaseController
             'message' => 'Usuario registrado',
         ]);
     }
-    private function generateJWT(array $payload)
+    public function update_user()
     {
-        $key = '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0';
-        return JWT::encode($payload, $key, "HS256");
+        $fields = [
+            "id" => "required",
+            "user_name" => "required",
+            "user_email" => "required|valid_email",
+        ];
+        if (!$this->validate($fields)) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'error' => true,
+                'message' => 'Erro de validação',
+                'errors' => $this->validator->getErrors()
+            ]);
+        };
+        $id = intval($this->request->getPost("id"));
+        $user_name = strval($this->request->getPost("user_name"));
+        $user_email = strval($this->request->getPost("user_email"));
+        $UserModel = new UserModel();
+        $UserModel->updateUser($id, $user_name, $user_email);
+        return $this->response->setJSON([
+            "susses" => true,
+            'message' => 'Usuario atualizado',
+        ]);
     }
 }

@@ -2,48 +2,76 @@
 
 namespace App\Filters;
 
-use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
-use Firebase\JWT\JWT;
 use Exception;
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 
 class AuthFilter implements FilterInterface
 {
-    use ResponseTrait;
-
+    /**
+     * Do whatever processing this filter needs to do.
+     * By default it should not return anything during
+     * normal execution. However, when an abnormal state
+     * is found, it should return an instance of
+     * CodeIgniter\HTTP\Response. If it does, script
+     * execution will end and that Response will be
+     * sent back to the client, allowing for error pages,
+     * redirects, etc.
+     *
+     * @param RequestInterface $request
+     * @param array|null       $arguments
+     *
+     * @return mixed
+     */
     public function before(RequestInterface $request, $arguments = null)
     {
-        $key = '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0';
-        $response = service('response');
-        $token = $request->getHeaderLine('Authorization');
-        $token = str_replace('Bearer ', '', $token);
-        $token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.nPtg3uGWj_EaFyGL0E5XXujpuvyvOVo3rfzZlD3Zkp8";
-        $key = "869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0";
-        var_dump(JWT::decode($token, $key, ['HS256']));
-        die;
+        $key = getenv('JWT_SECRET');
+        $header = $request->getHeaderLine("Authorization");
+        $token = null;
 
-        $decodedToken = JWT::decode("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJ2aXRvcmZlcm5hbmRvIiwidXNlcl9lbWFpbCI6InZpY3RvckBnbWFpbC5jb20ifQ.nPtg3uGWj_EaFyGL0E5XXujpuvyvOVo3rfzZlD3Zkp8", '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0', ['HS256']);
-        try {
-            $key = '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0';
+        // extract the token from the header
+        if (!empty($header)) {
+            if (preg_match('/Bearer\s(\S+)/', $header, $matches)) {
+                $token = $matches[1];
+            }
+        }
+
+        // check if token is null or empty
+        if (is_null($token) || empty($token)) {
             $response = service('response');
-            $token = $request->getHeaderLine('Authorization');
-            if (empty($token)) {
-                return $response->setStatusCode(401)->setJSON(['error' => 'Token JWT não fornecido.']);
-            }
-            $token = str_replace('Bearer ', '', $token);
-            $decodedToken = JWT::decode($token, $key, ['HS256']);
-            $agora = time();
-            if (isset($decodedToken->exp) && $decodedToken->exp < $agora) {
-                return $response->setStatusCode(401)->setJSON(['error' => 'Token JWT expirado.']);
-            }
-            $request->jwt = $decodedToken;
-        } catch (Exception $e) {
-            return $response->setStatusCode(401)->setJSON(['error' => 'Token JWT inválido.']);
+            $response->setBody('Access denied');
+            $response->setStatusCode(401);
+            return $response;
+        }
+
+        try {
+            // $decoded = JWT::decode($token, $key, array("HS256"));
+            $decoded = JWT::decode($token, new Key($key, 'HS256'));
+        } catch (Exception $ex) {
+            $response = service('response');
+            $response->setBody('Access denied');
+            $response->setStatusCode(401);
+            return $response;
         }
     }
+
+    /**
+     * Allows After filters to inspect and modify the response
+     * object as needed. This method does not allow any way
+     * to stop execution of other after filters, short of
+     * throwing an Exception or Error.
+     *
+     * @param RequestInterface  $request
+     * @param ResponseInterface $response
+     * @param array|null        $arguments
+     *
+     * @return mixed
+     */
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
+        //
     }
 }
