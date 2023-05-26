@@ -38,17 +38,19 @@ class AuthFilter implements FilterInterface
         }
         if (is_null($token) || empty($token)) {
             $response = service('response');
-            $response->setBody('Access denied');
-            $response->setStatusCode(401);
-            return $response;
+            return $response->setStatusCode(401)->setJSON([
+                'error' => true,
+                'message' => 'Token invalido!',
+            ]);
         }
         try {
             $decoded = JWT::decode($token, new Key($key, 'HS256'));
         } catch (Exception $ex) {
             $response = service('response');
-            $response->setBody('Access denied');
-            $response->setStatusCode(401);
-            return $response;
+            return $response->setStatusCode(401)->setJSON([
+                'error' => true,
+                'message' => 'Token invalido!',
+            ]);
         }
     }
 

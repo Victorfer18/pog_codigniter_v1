@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
-use Firebase\JWT\JWT;
 
 class UserController extends BaseController
 {
@@ -39,7 +38,6 @@ class UserController extends BaseController
                 'errors' => $this->validator->getErrors()
             ]);
         }
-
         $UserModel->registerUser(
             $user_name,
             $user_email,
@@ -80,6 +78,39 @@ class UserController extends BaseController
         return $this->response->setJSON([
             "susses" => true,
             'message' => 'Usuario atualizado',
+        ]);
+    }
+    public function get_user_by_email()
+    {
+        $fields = [
+            "id" => "required",
+        ];
+        if (!$this->validate($fields)) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'error' => true,
+                'message' => 'Erro de validação',
+                'errors' => $this->validator->getErrors()
+            ]);
+        };
+        $id = intval($this->request->getGet("id"));
+        $UserModel = new UserModel();
+        $get_user = $UserModel->getUser_by_id($id);
+        if (empty($get_user)) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'error' => true,
+                'message' => 'Usuario nao existe',
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
+        $get_user = [
+            "user_name" => $get_user["user_name"],
+            "user_email" => $get_user["user_email"],
+            "created_at" => $get_user["created_at"],
+        ];
+        return $this->response->setJSON([
+            "susses" => true,
+            "message" => "Usuario $get_user[user_name]",
+            "payload" => $get_user
         ]);
     }
 }

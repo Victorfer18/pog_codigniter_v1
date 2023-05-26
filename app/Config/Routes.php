@@ -35,6 +35,8 @@ $routes->get('/', 'Home::index');
 $routes->post("/login", "LoginController::index");
 $routes->post("/users/register", "UserController::register_user");
 $routes->post("/users/update", "UserController::update_user", ['filter' => 'authFilter']);
+$routes->get("/users", "UserController::get_user_by_email", ['filter' => 'authFilter']);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

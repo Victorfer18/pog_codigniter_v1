@@ -68,6 +68,6 @@ class UserModel extends Model
     public function getUser_by_id(int $id): array
     {
         $table = $this->banco->table("users");
-        return $table->where("id", $id)->get()->getResultArray() ?? [];
+        return $table->where("id", $id)->get()->getResultArray()[0] ?? [];
     }
 }

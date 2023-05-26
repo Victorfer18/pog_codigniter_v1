@@ -683,3 +683,104 @@ in VENDORPATH\firebase\php-jwt\src\Key.php on line 31.
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:27:25 --> Class "Help" not found
+in APPPATH\Controllers\UserController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:27:28 --> Class "Help" not found
+in APPPATH\Controllers\UserController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:27:34 --> Class "Help" not found
+in APPPATH\Controllers\UserController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:27:36 --> Class "Help" not found
+in APPPATH\Controllers\UserController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:28:31 --> Class "Help" not found
+in APPPATH\Controllers\UserController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:29:10 --> Class "Help" not found
+in APPPATH\Controllers\UserController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:30:58 --> Class "Help" not found
+in APPPATH\Controllers\UserController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:32:08 --> Call to undefined function App\Controllers\error()
+in APPPATH\Controllers\UserController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:32:09 --> Call to undefined function App\Controllers\error()
+in APPPATH\Controllers\UserController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:32:18 --> Call to undefined function App\Controllers\error()
+in APPPATH\Controllers\UserController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:32:19 --> Call to undefined function App\Controllers\error()
+in APPPATH\Controllers\UserController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:32:19 --> Call to undefined function App\Controllers\error()
+in APPPATH\Controllers\UserController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->register_user()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:40:39 --> Undefined array key "user_name"
+in APPPATH\Controllers\UserController.php on line 107.
+ 1 APPPATH\Controllers\UserController.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_name"', 'D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\app\\Controllers\\UserController.php', 107)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->get_user_by_email()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-26 21:44:23 --> Cannot access offset of type string on string
+in APPPATH\Controllers\UserController.php on line 107.
+ 1 [internal function]: App\Controllers\UserController->App\Controllers\{closure}('11')
+ 2 APPPATH\Controllers\UserController.php(105): array_map(Object(Closure), [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\UserController->get_user_by_email()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')

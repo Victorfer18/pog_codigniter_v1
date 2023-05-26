@@ -38,17 +38,11 @@ class LoginController extends BaseController
                 'errors' => $this->validator->getErrors()
             ]);
         }
-        $key = "869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0";
-        $iat = time();
-        $exp = $iat + 3600;
-
         $payload = array(
             "user_name" => $get_user["user_name"],
             "user_email" => $get_user["user_email"],
-            "iat" => $iat,
-            "exp" => $exp,
         );
-        $token = JWT::encode($payload, $key, 'HS256');
+        $token = self::generateJWT($payload);
 
         return $this->response->setJSON([
             "susses" => true,
@@ -58,7 +52,14 @@ class LoginController extends BaseController
     }
     private function generateJWT(array $payload)
     {
-        $key = '869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0';
+        $key = "869f468b932f4dffff7acd140b97421e420d36deb354a8c9e5ee1144685f9de0";
+        $iat = time();
+        $exp = $iat + 3600;
+        array_push($payload, [
+            "iat" => $iat,
+            "exp" => $exp
+        ]);
+
         return JWT::encode($payload, $key, "HS256");
     }
 }
