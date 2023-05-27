@@ -12,7 +12,7 @@ class UsersSeeder extends Seeder
         $faker = \Faker\Factory::create();
 
         $data = [];
-        $rows = 10;
+        $rows = 20;
         for ($i = 0; $i < $rows; $i++) {
             $data[] = [
                 'user_name'  => $faker->name,

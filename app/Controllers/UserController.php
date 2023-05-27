@@ -113,4 +113,49 @@ class UserController extends BaseController
             "payload" => $get_user
         ]);
     }
+    public function get_all_users()
+    {
+        $UserModel = new UserModel();
+        $get_user = $UserModel->getallUser();
+        $get_user = array_map(function ($index) {
+            return [
+                "user_name" => $index["user_name"],
+                "user_email" => $index["user_email"],
+                "created_at" => $index["created_at"],
+            ];
+        }, $get_user);
+        return $this->response->setJSON([
+            "susses" => true,
+            "message" => "Todos usuarios",
+            "payload" => $get_user
+        ]);
+    }
+    public function delete_user_by_id()
+    {
+        $fields = [
+            "id" => "required",
+        ];
+        if (!$this->validate($fields)) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'error' => true,
+                'message' => 'Erro de validação',
+                'errors' => $this->validator->getErrors()
+            ]);
+        };
+        $id = intval($this->request->getPost("id"));
+        $UserModel = new UserModel();
+        $get_user = $UserModel->getUser_by_id($id);
+        if (empty($get_user)) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'error' => true,
+                'message' => 'Usuario nao existe',
+                'errors' => $this->validator->getErrors()
+            ]);
+        }
+        $UserModel->deleteUser_by_id($id);
+        return $this->response->setJSON([
+            "susses" => true,
+            "message" => "Usuario '$get_user[user_name]' excluido",
+        ]);
+    }
 }

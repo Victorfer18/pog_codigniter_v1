@@ -70,4 +70,14 @@ class UserModel extends Model
         $table = $this->banco->table("users");
         return $table->where("id", $id)->get()->getResultArray()[0] ?? [];
     }
+    public function getallUser(): array
+    {
+        $table = $this->banco->table("users");
+        return $table->get()->getResultArray() ?? [];
+    }
+    public function deleteUser_by_id(int $id): void
+    {
+        $table = $this->banco->table("users");
+        $table->where("id", $id)->delete();
+    }
 }
