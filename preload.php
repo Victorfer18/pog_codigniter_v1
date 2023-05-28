@@ -8,7 +8,10 @@
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  */
-
+header("Access-Control-Allow-Headers: Authorization, Content-Type");
+header("Access-Control-Allow-Origin: *");
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 /*
  *---------------------------------------------------------------
  * Sample file for Preloading
@@ -32,7 +35,7 @@ define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR)
 /**
  * See https://www.php.net/manual/en/function.str-contains.php#126277
  */
-if (! function_exists('str_contains')) {
+if (!function_exists('str_contains')) {
     /**
      * Polyfill of str_contains()
      */

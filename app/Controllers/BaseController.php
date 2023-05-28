@@ -55,4 +55,29 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+    protected function validationErrorResponse()
+    {
+        return $this->response->setStatusCode(400)->setJSON([
+            'error' => true,
+            'message' => 'Erro de validação',
+            'errors' => $this->validator->getErrors()
+        ]);
+    }
+
+    protected function errorResponse($message)
+    {
+        return $this->response->setStatusCode(400)->setJSON([
+            'error' => true,
+            'message' => $message
+        ]);
+    }
+
+    protected function successResponse($message, $payload = [])
+    {
+        return $this->response->setJSON([
+            "success" => true,
+            "message" => $message,
+            "payload" => $payload
+        ]);
+    }
 }

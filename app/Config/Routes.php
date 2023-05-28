@@ -19,6 +19,11 @@ $routes->group("users", static function ($routes) {
     $routes->post("delete", "UserController::delete_user_by_id", ['filter' => 'authFilter']);
 });
 
+$routes->group("endereco", static function ($routes) {
+    $routes->post("register", "EnderecoController::register_endereco");
+});
+
+
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
