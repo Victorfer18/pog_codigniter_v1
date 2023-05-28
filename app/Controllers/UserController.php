@@ -16,9 +16,9 @@ class UserController extends BaseController
         if (!$this->validate($fields)) {
             return $this->validationErrorResponse();
         };
-        $user_name = strval($this->request->getPost("user_name"));
-        $user_email = strval($this->request->getPost("user_email"));
-        $user_password = strval($this->request->getPost("user_password"));
+        $user_name = strval($this->request->getVar("user_name"));
+        $user_email = strval($this->request->getVar("user_email"));
+        $user_password = strval($this->request->getVar("user_password"));
         $UserModel = new UserModel();
         if (!empty($UserModel->searchUser_by_name($user_name))) {
             return $this->errorResponse('Usuario ja existe');
@@ -43,9 +43,9 @@ class UserController extends BaseController
         if (!$this->validate($fields)) {
             return $this->validationErrorResponse();
         };
-        $id = intval($this->request->getPost("id"));
-        $user_name = strval($this->request->getPost("user_name"));
-        $user_email = strval($this->request->getPost("user_email"));
+        $id = intval($this->request->getVar("id"));
+        $user_name = strval($this->request->getVar("user_name"));
+        $user_email = strval($this->request->getVar("user_email"));
         $UserModel = new UserModel();
         if (empty($UserModel->getUser_by_id($id))) {
             $UserModel->getUser_by_id($id);
@@ -62,7 +62,7 @@ class UserController extends BaseController
         if (!$this->validate($fields)) {
             return $this->validationErrorResponse();
         };
-        $id = intval($this->request->getGet("id"));
+        $id = intval($this->request->getVar("id"));
         $UserModel = new UserModel();
         $get_user = $UserModel->getUser_by_id($id);
         if (empty($get_user)) {
@@ -96,7 +96,7 @@ class UserController extends BaseController
         if (!$this->validate($fields)) {
             return $this->validationErrorResponse();
         };
-        $id = intval($this->request->getPost("id"));
+        $id = intval($this->request->getVar("id"));
         $UserModel = new UserModel();
         $get_user = $UserModel->getUser_by_id($id);
         if (empty($get_user)) {

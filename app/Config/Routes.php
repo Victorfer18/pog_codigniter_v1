@@ -21,8 +21,8 @@ $routes->group("users", static function ($routes) {
 
 $routes->group("endereco", static function ($routes) {
     $routes->post("register", "EnderecoController::register_endereco", ['filter' => 'authFilter']);
+    $routes->get("all", "EnderecoController::get_all_endereco", ['filter' => 'authFilter']);
 });
-
 
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';

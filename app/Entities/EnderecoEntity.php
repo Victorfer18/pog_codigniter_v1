@@ -21,92 +21,92 @@ class EnderecoEntity extends Entity
         'updated_at' => null,
     ];
 
-    public function getId()
+    public function getId(): ?int
     {
         return $this->attributes['id'];
     }
 
-    public function getIdUser()
+    public function getIdUser(): ?int
     {
         return $this->attributes['id_user'];
     }
 
-    public function getEstado()
+    public function getEstado(): ?string
     {
         return $this->attributes['estado'];
     }
 
-    public function getCidade()
+    public function getCidade(): ?string
     {
         return $this->attributes['cidade'];
     }
 
-    public function getEndereco()
+    public function getEndereco(): ?string
     {
         return $this->attributes['endereco'];
     }
 
-    public function getNumero()
+    public function getNumero(): ?string
     {
         return $this->attributes['numero'];
     }
 
-    public function getComplemento()
+    public function getComplemento(): ?string
     {
         return $this->attributes['complemento'];
     }
 
-    public function getCreatedAt()
+    public function getCreatedAt(): ?string
     {
         return $this->attributes['created_at'];
     }
 
-    public function getUpdatedAt()
+    public function getUpdatedAt(): ?string
     {
         return $this->attributes['updated_at'];
     }
 
-    public function setId($id)
+    public function setId(?int $id)
     {
         $this->attributes['id'] = $id;
     }
 
-    public function setIdUser($idUser)
+    public function setIdUser(?int $idUser)
     {
         $this->attributes['id_user'] = $idUser;
     }
 
-    public function setEstado($estado)
+    public function setEstado(?string $estado)
     {
         $this->attributes['estado'] = $estado;
     }
 
-    public function setCidade($cidade)
+    public function setCidade(?string $cidade)
     {
         $this->attributes['cidade'] = $cidade;
     }
 
-    public function setEndereco($endereco)
+    public function setEndereco(?string $endereco)
     {
         $this->attributes['endereco'] = $endereco;
     }
 
-    public function setNumero($numero)
+    public function setNumero(?string $numero)
     {
         $this->attributes['numero'] = $numero;
     }
 
-    public function setComplemento($complemento)
+    public function setComplemento(?string $complemento)
     {
         $this->attributes['complemento'] = $complemento;
     }
 
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt(?string $createdAt)
     {
         $this->attributes['created_at'] = $createdAt;
     }
 
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(?string $updatedAt)
     {
         $this->attributes['updated_at'] = $updatedAt;
     }

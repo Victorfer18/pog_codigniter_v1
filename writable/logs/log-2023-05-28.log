@@ -416,3 +416,629 @@ WARNING - 2023-05-28 05:28:55 --> [DEPRECATED] Since fakerphp/faker 1.14: Access
  6 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run([])
  7 SYSTEMPATH\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', [...])
  8 ROOTPATH\spark(97): CodeIgniter\CLI\Console->run()
+ERROR - 2023-05-28 21:17:53 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:17:53 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:19:11 --> mysqli_sql_exception: Not unique table/alias: 'users' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:19:11 --> Not unique table/alias: 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:19:28 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:19:28 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:19:29 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:19:29 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:20:24 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:20:24 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(56): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:23:02 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:23:02 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:25:26 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:25:26 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:26:37 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:26:37 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:26:54 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:26:54 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:27:09 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:27:09 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:27:23 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:27:23 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `endereco`.`id_user` = `users`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:29:09 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:29:09 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:31:36 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:31:36 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:31:37 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:31:37 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:32:02 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:32:02 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+ERROR - 2023-05-28 21:33:30 --> mysqli_sql_exception: Unknown column 'endereco.id_user' in 'on clause' in D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Programas\xampp\htdocs\pog_codigniter_v1\app\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+#7 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+#8 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+#9 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Programas\xampp\htdocs\pog_codigniter_v1\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Programas\xampp\htdocs\pog_codigniter_v1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xa...')
+#12 {main}
+CRITICAL - 2023-05-28 21:33:30 --> Unknown column 'endereco.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `enderecos`
+JOIN `users` ON `users`.`id` = `endereco`.`id_user`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\EnderecoController.php(51): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-28 21:37:08 --> Undefined array key "nome_user"
+in APPPATH\Controllers\EnderecoController.php on line 50.
+ 1 APPPATH\Controllers\EnderecoController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome_user"', 'D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\app\\Controllers\\EnderecoController.php', 50)
+ 2 [internal function]: App\Controllers\EnderecoController->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\EnderecoController.php(48): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-28 21:37:49 --> Undefined array key "nome"
+in APPPATH\Controllers\EnderecoController.php on line 50.
+ 1 APPPATH\Controllers\EnderecoController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\app\\Controllers\\EnderecoController.php', 50)
+ 2 [internal function]: App\Controllers\EnderecoController->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\EnderecoController.php(48): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')
+CRITICAL - 2023-05-28 21:37:55 --> Undefined array key "nome_user"
+in APPPATH\Controllers\EnderecoController.php on line 50.
+ 1 APPPATH\Controllers\EnderecoController.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome_user"', 'D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\app\\Controllers\\EnderecoController.php', 50)
+ 2 [internal function]: App\Controllers\EnderecoController->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\EnderecoController.php(48): array_map(Object(Closure), [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EnderecoController->get_all_endereco()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EnderecoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Programas\\xampp\\htdocs\\pog_codigniter_v1\\public\\index.php')

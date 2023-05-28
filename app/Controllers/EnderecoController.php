@@ -23,12 +23,12 @@ class EnderecoController extends BaseController
             return $this->validationErrorResponse();
         };
         $enderecoEntity = new EnderecoEntity();
-        $enderecoEntity->id_user = $this->request->getPost('id_user');
-        $enderecoEntity->estado = $this->request->getPost('estado');
-        $enderecoEntity->cidade = $this->request->getPost('cidade');
-        $enderecoEntity->endereco = $this->request->getPost('endereco');
-        $enderecoEntity->numero = $this->request->getPost('numero');
-        $enderecoEntity->complemento = $this->request->getPost('complemento');
+        $enderecoEntity->id_user = $this->request->getVar('id_user');
+        $enderecoEntity->estado = $this->request->getVar('estado');
+        $enderecoEntity->cidade = $this->request->getVar('cidade');
+        $enderecoEntity->endereco = $this->request->getVar('endereco');
+        $enderecoEntity->numero = $this->request->getVar('numero');
+        $enderecoEntity->complemento = $this->request->getVar('complemento');
         $enderecoEntity->created_at = date('Y-m-d H:i:s');
         $enderecoEntity->updated_at = date('Y-m-d H:i:s');
         $UserModel = new UserModel();
@@ -39,5 +39,20 @@ class EnderecoController extends BaseController
         $enderecoModel = new EnderecoModel();
         $enderecoModel->insert($enderecoEntity);
         return $this->successResponse("Endereco registrado ao usuario $get_user[user_name]");
+    }
+    public function get_all_endereco()
+    {
+        $EnderecoModel = new EnderecoModel();
+        $payload = array_map(function ($index) {
+            return [
+                "nome" => $index["user_name"],
+                "estado" => $index["estado"],
+                "cidade" => $index["cidade"],
+                "endereco" => $index["endereco"],
+                "numero" => $index["numero"],
+                "complemento" => $index["complemento"],
+            ];
+        }, $EnderecoModel->join("users", "users.id = id_user")->findAll());
+        return $this->successResponse("Todos Enderecos", $payload);
     }
 }
