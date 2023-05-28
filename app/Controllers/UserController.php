@@ -80,7 +80,7 @@ class UserController extends BaseController
             'message' => 'Usuario atualizado',
         ]);
     }
-    public function get_user_by_email()
+    public function get_user_by_id()
     {
         $fields = [
             "id" => "required",

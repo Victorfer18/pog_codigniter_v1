@@ -15,7 +15,7 @@ $routes->group("users", static function ($routes) {
     $routes->post("register", "UserController::register_user");
     $routes->post("update", "UserController::update_user", ['filter' => 'authFilter']);
     $routes->get("all", "UserController::get_all_users", ['filter' => 'authFilter']);
-    $routes->get("users", "UserController::get_user_by_email", ['filter' => 'authFilter']);
+    $routes->get("user", "UserController::get_user_by_id", ['filter' => 'authFilter']);
     $routes->post("delete", "UserController::delete_user_by_id", ['filter' => 'authFilter']);
 });
 
