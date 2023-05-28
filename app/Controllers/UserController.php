@@ -14,39 +14,24 @@ class UserController extends BaseController
             "user_password" => "required",
         ];
         if (!$this->validate($fields)) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Erro de validação',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->validationErrorResponse();
         };
         $user_name = strval($this->request->getPost("user_name"));
         $user_email = strval($this->request->getPost("user_email"));
         $user_password = strval($this->request->getPost("user_password"));
         $UserModel = new UserModel();
         if (!empty($UserModel->searchUser_by_name($user_name))) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Usuario ja existe',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->errorResponse('Usuario ja existe');
         }
         if (!empty($UserModel->searchUser_by_email($user_email))) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Email ja utilizado',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->errorResponse('Email ja utilizado');
         }
         $UserModel->registerUser(
             $user_name,
             $user_email,
             $user_password
         );
-        return $this->response->setJSON([
-            "susses" => true,
-            'message' => 'Usuario registrado',
-        ]);
+        return $this->successResponse("Usuario registrado");
     }
     public function update_user()
     {
@@ -56,11 +41,7 @@ class UserController extends BaseController
             "user_email" => "required|valid_email",
         ];
         if (!$this->validate($fields)) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Erro de validação',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->validationErrorResponse();
         };
         $id = intval($this->request->getPost("id"));
         $user_name = strval($this->request->getPost("user_name"));
@@ -68,17 +49,10 @@ class UserController extends BaseController
         $UserModel = new UserModel();
         if (empty($UserModel->getUser_by_id($id))) {
             $UserModel->getUser_by_id($id);
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Unusario nao existe',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->errorResponse('Usuario nao existe');
         }
         $UserModel->updateUser($id, $user_name, $user_email);
-        return $this->response->setJSON([
-            "susses" => true,
-            'message' => 'Usuario atualizado',
-        ]);
+        return $this->successResponse("Usuario atualizado");
     }
     public function get_user_by_id()
     {
@@ -86,32 +60,20 @@ class UserController extends BaseController
             "id" => "required",
         ];
         if (!$this->validate($fields)) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Erro de validação',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->validationErrorResponse();
         };
         $id = intval($this->request->getGet("id"));
         $UserModel = new UserModel();
         $get_user = $UserModel->getUser_by_id($id);
         if (empty($get_user)) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Usuario nao existe',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->errorResponse('Usuario nao existe');
         }
         $get_user = [
             "user_name" => $get_user["user_name"],
             "user_email" => $get_user["user_email"],
             "created_at" => $get_user["created_at"],
         ];
-        return $this->response->setJSON([
-            "susses" => true,
-            "message" => "Usuario $get_user[user_name]",
-            "payload" => $get_user
-        ]);
+        return $this->successResponse("Usuario $get_user[user_name]", $get_user);
     }
     public function get_all_users()
     {
@@ -124,11 +86,7 @@ class UserController extends BaseController
                 "created_at" => $index["created_at"],
             ];
         }, $get_user);
-        return $this->response->setJSON([
-            "susses" => true,
-            "message" => "Todos usuarios",
-            "payload" => $get_user
-        ]);
+        return $this->successResponse("Todos usuarios", $get_user);
     }
     public function delete_user_by_id()
     {
@@ -136,26 +94,15 @@ class UserController extends BaseController
             "id" => "required",
         ];
         if (!$this->validate($fields)) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Erro de validação',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->validationErrorResponse();
         };
         $id = intval($this->request->getPost("id"));
         $UserModel = new UserModel();
         $get_user = $UserModel->getUser_by_id($id);
         if (empty($get_user)) {
-            return $this->response->setStatusCode(400)->setJSON([
-                'error' => true,
-                'message' => 'Usuario nao existe',
-                'errors' => $this->validator->getErrors()
-            ]);
+            return $this->errorResponse('Usuario nao existe');
         }
         $UserModel->deleteUser_by_id($id);
-        return $this->response->setJSON([
-            "susses" => true,
-            "message" => "Usuario '$get_user[user_name]' excluido",
-        ]);
+        return $this->successResponse("Usuario '$get_user[user_name]' excluido", $get_user);
     }
 }

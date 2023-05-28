@@ -20,7 +20,7 @@ $routes->group("users", static function ($routes) {
 });
 
 $routes->group("endereco", static function ($routes) {
-    $routes->post("register", "EnderecoController::register_endereco");
+    $routes->post("register", "EnderecoController::register_endereco", ['filter' => 'authFilter']);
 });
 
 
